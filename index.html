@@ -9,70 +9,97 @@
 	<script src="js/libs.min.js"></script>
 </head>
 <body>
+	<div class="test-block" id="specBlock"></div>
+	<div class="test-block block_2"></div>
+	<div class="test-block block_3"></div>
+
 	<div class="popup__section container">
-		<div class="popup__wrap">
+		<div class="popup__wrap" id="popupContainer">
 			<div class="popup-body">
-				<div class="popup-body__btn-close">
+				<div class="popup-body__btn-close" onclick="closeFunction()">
 					<span class="btn-close">&times;</span>
 				</div>
-				<div class="popup-body__title">
-					Тесно не будет!
-				</div>
-				<div class="popup-body__sub-title">
-					Специальное предложение на 2- и 3-комнатные квартиры
-				</div>
-				<!--
-				<div class="popup-body__deploy-content">
-					подробнее
-				</div>
-			-->
-				<div class="popup-body__popup-form">
-					<p class="popup-form__paragraph">
-						Нужно больше места? Для тех, кто любит простор — специальные цены<br> на 2- и 3-комнатные квартиры в ЖК Skyline. Подробности акции уточняйте по телефону +7 (843) 204-06-21 или заполнив форму ниже.
-					</p>
-					<form class="popup-form__content">
-						<div class="popup-form__content-slaider">
+				<div class="popup-body__content">
+					<div class="popup-body__title">
+						Тесно не будет!
+					</div>
+					<div class="popup-body__sub-title">
+						Специальное предложение на 2- и 3-комнатные квартиры
+					</div>
+					<div class="popup-body__deploy-content" id="hideContent" onclick="deployContent()">
+						подробнее
+					</div>
+					<div class="popup-body__popup-form" id="popupContent">
+						<p class="popup-form__paragraph">
+							Нужно больше места? Для тех, кто любит простор — специальные цены<br> на 2- и 3-комнатные квартиры в ЖК Skyline. Подробности акции уточняйте по телефону +7 (843) 204-06-21 или заполнив форму ниже.
+						</p>
+						<form class="popup-form__content">
+							<div class="popup-form__content-slaider">
 
-							<div class="popup-form__slaider-wrap">
+								<div class="popup-form__slaider-wrap">
 
-								<div class="popup-form__slaider-item">
-									<label for="userName" class="popup-form__slaider-text">Имя</label>
-									<div class="popup-form__slaider-field">
-										<input type="text" id="userName" class="popup-form__slaider-name">
+									<div class="popup-form__slaider-item active">
+										<label for="userName" class="popup-form__slaider-text">Имя</label>
+										<div class="popup-form__slaider-field">
+											<input type="text" id="userName" name="name" class="popup-form__slaider-name">
+										</div>
+										<div class="popup-form__slaider-arrow" onclick="nextSlide()">
+											<img src="img/arrow_white.png" alt="" class="popup-form__slaider-arrow-img">
+										</div>
 									</div>
-									<div class="popup-form__slaider-arrow">
-										<img src="img/arrow_white.png" alt="" class="popup-form__slaider-arrow-img">
+
+									<div class="popup-form__slaider-item">
+										<label for="userPhone" class="popup-form__slaider-text">Телефон</label>
+										<div class="popup-form__slaider-field">
+											<input type="tel" id="userPhone" name="phone" class="popup-form__slaider-name">
+										</div>
+										<button type="submit" class="popup-form__slaider-arrow button">
+											<img src="img/arrow_white.png" alt="" class="popup-form__slaider-arrow-img">
+										</button>
+									</div>
+
+								</div>
+
+								<div class="popup-form__slaider-control">
+									<div class="popup-form__control-underline">
+										<div class="control-underline__item control-underline_left active" onclick="previousSlide()">
+										</div>
+										<div class="control-underline__item control-underline_right" onclick="nextSlide()">
+										</div>
+									</div>
+									<div class="popup-form__control-numbers">
+										<div class="control-numbers__list-item active">
+											<div class="control-numbers__item">02</div>
+											<div class="control-numbers__item">/</div>
+											<div class="control-numbers__item">01</div>
+										</div>
+										<div class="control-numbers__list-item">
+											<div class="control-numbers__item">02</div>
+											<div class="control-numbers__item">/</div>
+											<div class="control-numbers__item">02</div>
+										</div>
 									</div>
 								</div>
 
 							</div>
 
-							<div class="popup-form__slaider-control">
-								<div class="popup-form__control-underline">
-									<div class="control-underline__item control-underline_left active">
-									</div>
-									<div class="control-underline__item control-underline_right">
-									</div>
-								</div>
-								<div class="popup-form__control-numbers">
-									<div class="control-numbers__list-item">
-										<div class="control-numbers__item">02</div>
-										<div class="control-numbers__item">/</div>
-										<div class="control-numbers__item">01</div>
-									</div>
+							<div class="popup-form__content-agreement">
+								<div class="popup-form__agreement-check-box">
+									<input type="checkbox" id="agreementCheckBox" checked="checked" class="agreement-check-box">
+									<label for="agreementCheckBox" class="popup-form__agreement-text">согласие на обработку персональных данных</label>
 								</div>
 							</div>
 
-						</div>
-
-						<div class="popup-form__content-agreement">
-							<div class="popup-form__agreement-check-box">
-								<input type="checkbox" id="agreementCheckBox" checked="checked" class="agreement-check-box">
-								<label for="agreementCheckBox" class="popup-form__agreement-text">согласие на обработку персональных данных</label>
-							</div>
-						</div>
-
-					</form>
+						</form>
+					</div>
+				</div>
+				<div class="popup-body__sucsess-message">
+					<div class="sucsess-message__title">
+						Спасибо за заявку!
+					</div>
+					<div class="sucsess-message__paragraph">
+						Наш менеджер перезвонит вам в ближайшее время.
+					</div>
 				</div>
 			</div>
 		</div>
