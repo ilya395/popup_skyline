@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/* шрифты */
+@font-face {
+  font-family: IBMPlexSans;
+  src: url(../fonts/IBMPlexSans/IBMPlexSans-Regular.ttf); }
+
+.container {
+  margin: 0 auto; }
+
+.popup__section {
+  width: 100%; }
+
+.popup__section {
+  position: relative; }
+
+.popup__wrap {
+  position: fixed;
+  bottom: 0;
+  left: -webkit-calc(50% - 240px);
+  left: calc(50% - 240px); }
+
+.popup-body {
+  width: 479px;
+  /*height: 226px*/
+  opacity: 0.9;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 25px 1px rgba(0, 0, 0, 0.33);
+          box-shadow: 5px 5px 25px 1px rgba(0, 0, 0, 0.33);
+  background-image: -webkit-linear-gradient(335deg, #083c62, #ceb88b);
+  background-image: -o-linear-gradient(335deg, #083c62, #ceb88b);
+  background-image: linear-gradient(115deg, #083c62, #ceb88b);
+  margin-bottom: 81px;
+  position: relative; }
+
+.popup-body__btn-close {
+  position: absolute;
+  top: 14px;
+  right: 14px; }
+
+.btn-close {
+  color: #fcf9fd;
+  font-size: 26px;
+  line-height: 14px; }
+
+.popup-body__title {
+  font-family: IBMPlexSans;
+  font-size: 42px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fce4b1;
+  padding-top: 19px;
+  margin-left: 33px;
+  position: relative; }
+
+.popup-body__sub-title {
+  padding-right: 108px;
+  padding-left: 33px;
+  padding-top: 8px;
+  font-family: IBMPlexSans;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.18;
+  letter-spacing: normal;
+  color: #ffffff; }
+
+.popup-body__deploy-content {
+  display: inline-block;
+  font-family: IBMPlexSans;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  padding-left: 33px;
+  padding-top: 21px;
+  padding-bottom: 44px;
+  text-decoration: underline; }
+
+/*. */
+.popup-body__popup-form {
+  padding-top: 21px;
+  padding-left: 33px;
+  padding-right: 98px; }
+
+.popup-form__paragraph {
+  font-family: IBMPlexSans;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.popup-form__content {
+  padding-top: 8px; }
+
+.popup-form__slaider-item {
+  position: relative; }
+
+.popup-form__slaider-text {
+  font-family: IBMPlexSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: 0.9px;
+  color: #ffffff;
+  text-transform: uppercase; }
+
+.popup-form__slaider-field {
+  width: 100%;
+  padding-right: 57px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.popup-form__slaider-name {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: solid 1px #ffffff;
+  background: transparent;
+  padding: 14px 15px 14px 15px;
+  width: 100%;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block; }
+
+.popup-form__slaider-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 23px;
+  right: 56px;
+  padding: 17px 15px 17px 15px; }
+
+/*. */
+.popup-form__control-underline {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+
+.control-underline__item {
+  content: "";
+  position: absolute;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: -webkit-calc(50% - 29px);
+  width: calc(50% - 29px);
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 0 0 0 27px;
+          border-radius: 0 0 0 27px;
+  height: 5px;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  bottom: 1px;
+  display: none; }
+
+.control-underline__item.active {
+  display: block; }
+
+.control-underline_left {
+  -webkit-border-radius: 0 0 0 27px;
+          border-radius: 0 0 0 27px; }
+
+.control-underline_right {
+  width: -webkit-calc(100% - 57px);
+  width: calc(100% - 57px);
+  -webkit-border-radius: 0 0 27px 27px;
+          border-radius: 0 0 27px 27px;
+  left: 0; }
+
+/*.цифры */
+.popup-form__control-numbers {
+  display: block;
+  padding-top: 8px;
+  padding-right: 57px; }
+
+.control-numbers__list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
+.control-numbers__item {
+  font-family: IBMPlexSans;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.2px;
+  color: #ffffff; }
+
+.control-numbers__item:nth-child(2) {
+  padding-right: 8px;
+  padding-left: 8px; }
+
+/*.согласие */
+.popup-form__content-agreement {
+  margin-top: -11px;
+  padding-bottom: 40px; }
+
+.popup-form__agreement-check-box {
+  position: relative; }
+
+input[type=checkbox].agreement-check-box {
+  display: none; }
+
+.popup-form__agreement-text:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  -webkit-border-radius: 1px;
+          border-radius: 1px;
+  background-color: #ffffff;
+  top: 4px;
+  left: 0; }
+
+input[type=checkbox].agreement-check-box:checked + .popup-form__agreement-text:before {
+  content: "\2714";
+  color: #454545;
+  font-size: 9px;
+  text-align: center;
+  line-height: 9px; }
+
+.popup-form__agreement-text {
+  font-family: IBMPlexSans;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 20px;
+  padding-right: 160px; }
